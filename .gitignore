@@ -1,0 +1,39 @@
+# ----| [ FOLDERS IGNORED ] |---- #
+###################################
+/dist
+/node_modules
+/env
+/config
+/pgdata
+*/**/firebase.config.json
+libs/firebase/src/firebase.json
+###################################
+# ----| [  FILES IGNORED  ] |---- #
+###################################
+.env
+.env.dev
+docker-compose.yml
+./docs/node_modules
+./docs/build
+###################################
+# ----| [ OTHERS IGNORED  ] |---- #
+###################################
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.DS_Store
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
