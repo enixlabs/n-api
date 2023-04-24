@@ -32,11 +32,8 @@ export function setupSwagger(app: INestApplication) {
     swaggerOptions: {
       persistAuthorization: true,
     },
-    customFavicon: 'https://metacubic.org/favicon.ico',
-    customSiteTitle: 'M³ BaaS API',
-    swaggerUrl: 'https://api.metacubic.org/v1',
-    validatorUrl: 'https://api.metacubic.org/v1',
-    url: 'https://api.metacubic.org/v1',
+    customFavicon: 'https://nxie.uk/favicon.ico',
+    customSiteTitle: 'NXiE: API [nxie.uk]',
     urlsPrimaryName: 'Production',
     plugins: [
       {

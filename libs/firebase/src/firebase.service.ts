@@ -1,6 +1,6 @@
 import { Injectable, NestMiddleware } from '@nestjs/common';
 import * as firebase from 'firebase-admin';
-import * as serviceAccount from '../../database/firebaseAccount.json';
+import * as serviceAccount from './firebase.json';
 
 const firebaseConfig = {
   type: serviceAccount.type,
@@ -33,10 +33,9 @@ export class FirebaseService implements NestMiddleware {
         .auth()
         .verifyIdToken(token.replace('Bearer ', ''))
         .then(async (decodedToken) => {
-          const user = {
+          req['user'] = {
             email: decodedToken.email,
           };
-          req['user'] = user;
           next();
         })
         .catch((error) => {

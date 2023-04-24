@@ -15,6 +15,7 @@ import { ServeStaticModule } from '@nestjs/serve-static';
 import { AuthGuard } from './security/guards/auth/auth.guard';
 import { JwtService } from '@nestjs/jwt';
 import { HttpService } from './security/services/http/http.service';
+import { HealthModule } from './checks/health/health.module';
 
 @Module({
   imports: [
@@ -77,6 +78,7 @@ import { HttpService } from './security/services/http/http.service';
         extensions: ['ejs'],
       },
     }),
+    HealthModule,
   ],
   controllers: [],
   providers: [
